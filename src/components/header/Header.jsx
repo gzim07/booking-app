@@ -33,7 +33,7 @@ import { useNavigate } from 'react-router-dom'
             room:0
         });
 
-        const navigate=useNavigate()
+        const navigate=useNavigate();
         const handleSearch=()=>{
             navigate("/hotels",{state:{destination,date,options}});
 
@@ -84,6 +84,7 @@ import { useNavigate } from 'react-router-dom'
                     moveRangeOnFirstSelection={false}
                     ranges={date}
                     className='date'
+                    minDate={new Date()}
                     />}
                 </div>
                 <div className="headerSearchItem">
