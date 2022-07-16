@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./list.css"
 import Header from '../../components/header/Header';
 import Navbar from '../../components/navbar/Navbar';
+import { useLocation } from 'react-router-dom';
  const List = () => {
+  const location=useLocation()
+  const [destination,setDestination]=useState(location.state.destination);
+  const [date,setDate]=useState(location.state.date);
+  const [options,setOptions]=useState(location.state.options);
   return (
+
     <div>
       <Navbar/>
       <Header type="list" />
@@ -19,7 +25,7 @@ import Navbar from '../../components/navbar/Navbar';
         </div>
         <div className="lsItem">
           <label>Check-in Date</label>
-         
+          
  
         </div>
         </div>
